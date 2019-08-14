@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     axios
       // calling Nasa API
-      .get(`https://api.nasa.gov/planetary/apod`)
+      .get(`https://api.nasa.gov/planetary/apod?api_key=wQe8tiUEu5Y5nDLpRryKo8aelQSCQOdYarI7uNoC`)
       .then(response => {
         // states for each variable
         const dailyAPOD = response.data.url;

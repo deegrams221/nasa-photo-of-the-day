@@ -76,3 +76,13 @@ p {
   text-align: justify;
   line-height: 1.6rem;
 }
+
+button {
+  background: #282c34;
+  color: #61dafb;
+  font-size: 1em;
+  font-weight: 700;
+  margin: 1em;
+  padding: 1em 5em;
+  border-radius: 3px;
+}
