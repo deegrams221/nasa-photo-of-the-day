@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     axios
       // calling Nasa API
-      .get(`https://api.nasa.gov/planetary/apod?api_key=wQe8tiUEu5Y5nDLpRryKo8aelQSCQOdYarI7uNoC`)
+      .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
       .then(response => {
         // states for each variable
         const dailyAPOD = response.data.url;
@@ -34,7 +34,7 @@ function App() {
       })
       // catch error message
       .catch(error => {
-        //console.log(`API currently down: `, error);
+        console.log(`API currently down: `, error);
       })
   }, [])
 
