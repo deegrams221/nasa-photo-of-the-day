@@ -1,5 +1,31 @@
 // import
 import React, {useState} from "react";
+import styled from "styled-components";
+import Button from "./Button";
+
+// Styled-components (Day Two)
+const StyledAPODCard = styled.div `
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+    padding: 2rem;
+`;
+
+const StyledImg = styled.img `
+    margin-bottom: 1em;
+    width: 90vh;
+`;
+
+const StyledH2 = styled.h2 `
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 1rem;
+`;
+
+const StyledH3 = styled.h3 `
+    font-size: 1.4rem;
+`;
 
 // export
 export default function APODCard({dailyAPODURL, dailyAPODTitle, explanation}) {
@@ -11,22 +37,22 @@ export default function APODCard({dailyAPODURL, dailyAPODTitle, explanation}) {
     };
     if(showContent) {
         return (
-            <div className = "apod-card">
-                <img src = {dailyAPODURL} alt = "NASA Astrological Image of the Day" />
-                <h2>{dailyAPODTitle}</h2>
-                <h3>{explanation}</h3>
+            <StyledAPODCard>
+                <StyledImg src = {dailyAPODURL} alt = "NASA Astrological Image of the Day" />
+                <StyledH2>{dailyAPODTitle}</StyledH2>
+                <StyledH3>{explanation}</StyledH3>
                 <br></br>
-                <button type = "primary" onClick = {toggleMode}>Less Info</button>
-            </div>
+                <Button type = "infoButton" onClick = {toggleMode}>Less Info</Button>
+            </StyledAPODCard>
         )
     } else {
         return (
-            <div className = "apod-card">
-                <img src = {dailyAPODURL} alt = "NASA Astrological Image of the Day" />
-                <h2>{dailyAPODTitle}</h2>
+            <StyledAPODCard>
+                <StyledImg src = {dailyAPODURL} alt = "NASA Astrological Image of the Day" />
+                <StyledH2>{dailyAPODTitle}</StyledH2>
                 <br></br>
-                <button type="primary" onClick={toggleMode}>More Info</button>
-            </div>
+                <Button type="infoButton" onClick={toggleMode}>More Info</Button>
+            </StyledAPODCard>
         )
     }
 }

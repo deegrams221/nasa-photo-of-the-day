@@ -1,9 +1,16 @@
 // imports
-import React, {useEffect, useState, Component} from "react";
-import "./App.css";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
 import Header from "./components/Header";
 import APODCard from "./components/APODCard";
+import styled from "styled-components";
+
+// Styled-components (Day Two)
+const StyledApp = styled.div `
+  text-align: center;
+  width: 90vw;
+`;
+
 
 function App() {
   // state variables
@@ -39,14 +46,14 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <StyledApp>
       {/* <p>
         Read through the instructions in the README.md file to build your NASA
         app! Have fun 🚀!
       </p> */}
       <Header date = {date} />
       <APODCard dailyAPODURL = {photo} dailyAPODTitle = {title} explanation = {info} />
-    </div>
+    </StyledApp>
   );
 }
 
