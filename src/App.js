@@ -1,5 +1,5 @@
 // imports
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, Component} from "react";
 import "./App.css";
 import axios from "axios";
 import Header from "./components/Header";
