@@ -8,7 +8,7 @@ import styled from "styled-components";
 // Styled-components (Day Two)
 const StyledApp = styled.div `
   text-align: center;
-  width: 90vw;
+  width: 100vw;
 `;
 
 
